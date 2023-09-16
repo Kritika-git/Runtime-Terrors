@@ -25,6 +25,9 @@
 .navbar-toggler span{
     color: #ffa500;
 }
+.navbar-collapse{
+    margin: 20px;
+}
 .navbar-nav{
     margin-left: 20px;
 }
@@ -35,25 +38,57 @@
     letter-spacing: 1px;
     border-radius: 3px;
     transition: 0.5s ease;
+    text-align: center;
 }
 .nav-item .nav-link:hover{
     background: #ffa500;
     color: white;
+    text-align: center;
+    
 }
 #navbar form button{
     background: orange;
     color: white;
     border: none;
+    text-align: center;
 }
-.dropdwon{
+/* .dropdwon{
+    display:none;
+} */
+.dropdwon1{
+    display:none;
+    max-width: 200px;
+   
+}
+.dropdwon2{
     display:none;
 }
-.navbar-collapse ul li:hover .dropdwon{
+/* .navbar-collapse ul li:hover .dropdwon{
     display: block;
     position:absolute;
     background: orange;
-    margin-top: 10px;
-    margin-left: -10px;
+    margin: auto;
+    /* margin-top: 10px; */
+    /* margin-left: -10px; */
+    /* text-align: center; */
+/*} */
+.navbar-collapse ul li:hover .dropdwon1{
+    display: block;
+    position:absolute;
+    background: orange;
+    /* margin-left: -3px; */
+     text-align: center;
+     /* word-wrap: break-word;
+    white-space: normal; */
+    /* max-width: 200px; */
+
+}
+.navbar-collapse ul li:hover .dropdwon2{
+    display: block;
+    position:absolute;
+    background: orange;
+    
+    margin-right: -40px;
     text-align: center;
 }
 .navbar-collapse ul li ul{
@@ -61,7 +96,7 @@
     padding: 5px;
     border-bottom:1px #0e0e0e;
      background: transparent;
-    border-radius: 0;
+    border-radius: 2;
     text-align: center;
 }
 /* Navbar End */
@@ -69,7 +104,7 @@
 /* Home Section Start */
 
 /* for slide */
-.image-slideshow {
+/* .image-slideshow {
     max-width: 1500px;
     max-height: 100px;
     position: relative;
@@ -87,8 +122,71 @@
   @keyframes fade {
     from {opacity: 0.2}
     to {opacity: 2}
-  }
+  } */
   /* end slide */
+  /* new slide start */
+  
+.slider{
+    overflow:hidden;
+    width:100%;
+    height:80vh;
+    z-index: -1;
+}
+.slider figure div{
+    float:left;
+    width:20%;
+   
+}
+
+.slider figure img{
+    width:100%;
+    height:80vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat:no-repeat;
+    float:left;
+    
+}
+.slider figure{
+    position:relative;
+    width:500%;
+    margin:0;
+    animation:animate 15s infinite;
+    z-index: -1;
+}
+/* p{
+    position:fixed;
+    color:#fff;
+    font-size: 70px;
+    text-align:center;
+    padding-top: 250px;
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    height:80vh;
+} */
+@keyframes animate{
+    0%{left:0%;}
+    10%{left:0%;}
+    12%{left:-100%;}
+    22%{left:-100%;}
+    24%{left:-200%;}
+    34%{left:-200%;}
+    36%{left:-300%;}
+    46%{left:-300%;}
+    48%{left:-400%;}
+    58%{left:-400%;}
+    60%{left:-300%;}
+    70%{left:-300%;}
+    72%{left:-200%;}
+    82%{left:-200%;}
+    84%{left:-100%;}
+    94%{left:-100%;}
+    96%{left:0%;}
+    
+   
+}
+
+  /* new slide end */
 .home{
     width: 100%;
     height: 90vh;
@@ -100,14 +198,14 @@
     text-align: center;
     padding-top: 2px;
 }
-.home .content h5{
+.home .content h3{
     color: rgb(20, 19, 19);
     font-size: 50px;
     font-weight: 550;
     text-shadow: 0px 1px 1px rgb(5, 3, 3);
     text-align: center;
 }
-.home .content h5 span{
+.home .content h3 span{
     color: #ffa500;
 }
 .home .content h1{
@@ -115,7 +213,7 @@
     font-size: 70px;
     font-weight: 550;
     text-shadow: 0px 1px 1px black;
-    margin-top: 5px;
+    margin-top: 10px;
 }
 .changecontent::after{
     content: ' ';
@@ -164,7 +262,7 @@
     }
 }
 @media (max-width:450px){
-    .home .content h5{
+    .home .content h3{
         font-size: 50px;
         
         
@@ -188,25 +286,28 @@
 .main-txt h1 span{
     color: #ffa500;
 }
-.packages .card{
+.State .card{
     border-radius: 5px;
     border: none;
     box-shadow: rgba(0,0,0,0.1) 0px 4px 12px;
+    /* width: 410px; 
+    height: 315px; */
 }
-.packages .card img{
+.State .card img{
     border-radius: 5px;
-   
+    width: 415px; 
+    height: 315px; 
    
     
 }
-.packages .card .card-body{
+.State .card .card-body{
     background: transparent;
 }
-.packages .card .card-body h3{
+.State .card .card-body h3{
     font-size: 25px;
     font-weight: 600;
 }
-.packages .card .card-body p{
+.State .card .card-body p{
     font-size: 15px;
 }
 .checked{
@@ -215,10 +316,10 @@
 .star i{
     font-size: 15px;
 }
-.packages .card .card-body h6{
+.State .card .card-body h6{
     font-size: 20px;
 }
-.packages .card .card-body a{
+.State .card .card-body a{
     padding: 10px;
     text-decoration: none;
     background: #ffa500;
@@ -227,3 +328,84 @@
 }
 /* Section states End */
 
+
+
+/* About Start */
+.about{
+    padding: 50px;
+    margin-top: 50px;
+    background: #f9f9f9;
+}
+.about .card{
+    border-radius: 10px;
+    width: 420px;
+    height: 395px;
+}
+.about .card img{
+    border-radius: 10px;
+    width: 410px; 
+    height: 395px; 
+    align-self: center;
+}
+.about h2{
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.about p{
+    font-weight: 500;
+}
+#about-btn{
+    width: 150px;
+    height: 38px;
+    border: none;
+    border-radius: 5px;
+    background: #ffa500;
+    color: white;
+    letter-spacing: 2px;
+    font-weight: 550;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+#about-btn:hover{
+    width: 170px;
+}
+@media (max-width:765px){
+    .about{
+        padding: 0;
+    }
+}
+/* About End */
+
+
+
+
+/* Footer Start */
+#footer{
+    width: 100%;
+    margin-top: 150px;
+    text-align: center;
+    background: #f9f9f9;
+}
+#footer h1{
+    font-weight: 600;
+    padding-top: 30px;
+    text-shadow: 0px 0px 1px black;
+}
+#footer h1 span{
+    color: #ffa500;
+}
+.social-links i{
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    background: black;
+    color: white;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+.social-links i:hover{
+    background: #ffa500;
+}
+/* Footer End */
